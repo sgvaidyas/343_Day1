@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 int main() {
 	long long n;
 	int dig;
@@ -7,7 +8,7 @@ int main() {
 	
 	dig = int(log10(n)+1);
 	
-	firstDigit = firstDigit *int(pow(10,dig));
+	firstDigit = firstDigit *int(pow(10,dig-1));
 	n /= 10;
 	std::cout << firstDigit + n;
 	
